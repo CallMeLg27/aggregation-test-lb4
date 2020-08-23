@@ -1,0 +1,21 @@
+use agg-test
+
+db.Embebidos.insertOne({
+	"Embebido_id":"E00001",
+	"dato_simple":"hola",
+	"array_strings":["a","e","i","o","u"],
+	"array_objetos":[{"at1":"pa","at2":"pe"},{"at1":"pi","at2":"po"},{"at1":"pu"}]
+})
+
+db.Referenciadores.insertOne({
+	"Referenciador_id":"FROM0001",
+	"Referenciado_id":"TO0001",
+	"dato_simple":"hola"
+})
+
+db.Referenciados.insertOne({
+	"Referenciado_id":"TO0001",
+	"dato_simple":"hola",
+	"data1":1,
+	"data2":"x"
+})
